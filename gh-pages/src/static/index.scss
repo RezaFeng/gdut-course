@@ -1,0 +1,88 @@
+$greenColor: rgb(41, 180, 138);
+$whiteColor: white;
+$fontSize: 0.8rem;
+
+.header {
+  height: 8rem;
+  background-color: $greenColor;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .header-inner {
+    color: $whiteColor;
+
+    .header-title {
+      font-size: 2rem;
+
+      a {
+        cursor: pointer;
+        color: inherit;
+        text-decoration: none;
+      }
+    }
+
+    .header-subtitle {
+      font-size: $fontSize;
+    }
+  }
+}
+
+.main {
+  width: 30rem;
+  margin: 1rem auto; // 水平居中, 上下margin值设为1rem
+
+  h2.list-name {
+    color: $greenColor; // 字体颜色
+  }
+
+  .nav-list {
+    font-size: $fontSize;
+    overflow: hidden;
+    margin: 1rem;
+
+    li {
+      float: left;
+      margin-right: 1rem;
+
+      &:hover {
+        color: $greenColor;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .file-list {
+    margin: 1rem;
+    width: 100%;
+
+    thead {
+      tr{
+        border-bottom: 1px solid;
+
+        td {
+          padding-bottom: 0.2rem;
+        }
+      }
+    }
+
+    tbody {
+      font-size: $fontSize;
+
+      tr {
+        td {
+          padding: 0.2rem;
+
+          a {
+            color: inherit;
+            text-decoration: none;
+          }
+        }
+
+        &:hover {
+          background-color: rgb(221, 234, 221);
+        }
+      }
+    }
+  }
+}
