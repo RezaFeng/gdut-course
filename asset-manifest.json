@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/gdut-course/static/css/main.e1526a62.chunk.css",
-    "main.js": "/gdut-course/static/js/main.22979c16.chunk.js",
-    "main.js.map": "/gdut-course/static/js/main.22979c16.chunk.js.map",
+    "main.css": "/gdut-course/static/css/main.a7adce97.chunk.css",
+    "main.js": "/gdut-course/static/js/main.9c23c61f.chunk.js",
+    "main.js.map": "/gdut-course/static/js/main.9c23c61f.chunk.js.map",
     "runtime~main.js": "/gdut-course/static/js/runtime~main.e03ff838.js",
     "runtime~main.js.map": "/gdut-course/static/js/runtime~main.e03ff838.js.map",
     "static/js/2.d6a534e5.chunk.js": "/gdut-course/static/js/2.d6a534e5.chunk.js",
     "static/js/2.d6a534e5.chunk.js.map": "/gdut-course/static/js/2.d6a534e5.chunk.js.map",
     "index.html": "/gdut-course/index.html",
-    "precache-manifest.82ceaa2814e3805704cc35f1c0a935f5.js": "/gdut-course/precache-manifest.82ceaa2814e3805704cc35f1c0a935f5.js",
+    "precache-manifest.4820ad1820d6169fff2f0b0f9d131374.js": "/gdut-course/precache-manifest.4820ad1820d6169fff2f0b0f9d131374.js",
     "service-worker.js": "/gdut-course/service-worker.js",
-    "static/css/main.e1526a62.chunk.css.map": "/gdut-course/static/css/main.e1526a62.chunk.css.map"
+    "static/css/main.a7adce97.chunk.css.map": "/gdut-course/static/css/main.a7adce97.chunk.css.map"
   }
 }

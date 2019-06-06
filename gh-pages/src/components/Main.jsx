@@ -21,36 +21,34 @@ export default class Main extends React.Component {
 
     render() {
         return <main className="main">
-            <h2 className="list-name">导航列表</h2>
-            <ul className="nav-list">
-                {fileTree.map((item, idx)=>{
-                    return <li id={idx} key={idx} onClick={this.handleClick}>{item.name}</li>;
-                })}
-            </ul>
-            <h2 className="list-name">文件列表</h2>
-            <table className="file-list">
-                <thead>
-                    <tr>
-                        <td>Floders</td>
-                        <td>Last Update</td>
-                    </tr>
-                </thead>
-                <tbody>
-                {
-                    this.state.father.children.map((item, idx)=>{
-                        return <tr key={idx}>
-                            <td className="filename" key={idx}>
-                            {
-                                // 判断是文件夹还是文件, 文件的话要加上a标签
-                                item.children? (<span id={idx} onClick={this.handleClick}>{item.name}</span>): (<a href={item.url} target="_blank" rel="noopener noreferrer">{item.name}</a>)
-                            }
-                            </td>
-                            <td className="filetime">{item.mtime}</td>
-                        </tr>;
-                    })
-                }
-                </tbody>
-            </table>
+            <div className="nav-list">
+                <h2 className="list-name">导航列表</h2>
+                <ul className="nav-items">
+                    {fileTree.map((item, idx)=>{
+                        return <li id={idx} key={idx} onClick={this.handleClick}>{item.name}</li>;
+                    })}
+                </ul>
+            </div>
+            <div className="file-list">
+                <h2 className="list-name">文件列表</h2>
+                <ul className="file-items">
+                    <div className="firstline">
+                        <span>Floders</span>
+                        <span>Last Update</span>
+                    </div>
+                    {
+                        this.state.father.children.map((item, idx)=>{
+                            return <li key={idx}>
+                                {
+                                    // 判断是文件夹还是文件, 文件的话要加上a标签
+                                    item.children? (<span className="filename" id={idx} onClick={this.handleClick}>{item.name}</span>): (<a href={item.url} className="filename" target="_blank" rel="noopener noreferrer">{item.name}</a>)
+                                }
+                                <span className="filetime">{item.mtime}</span>
+                            </li>;
+                        })
+                    }
+                </ul>
+            </div>
         </main>;
     }
 }

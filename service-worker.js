@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/gdut-course/precache-manifest.82ceaa2814e3805704cc35f1c0a935f5.js"
+  "/gdut-course/precache-manifest.4820ad1820d6169fff2f0b0f9d131374.js"
 );
 
 self.addEventListener('message', (event) => {

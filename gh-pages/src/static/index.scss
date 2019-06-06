@@ -5,12 +5,12 @@ $fontSize: 0.8rem;
 .header {
   height: 8rem;
   background-color: $greenColor;
-  display: flex;
+  display: flex; // 实现标题的水平垂直居中
   justify-content: center;
   align-items: center;
 
   .header-inner {
-    color: $whiteColor;
+    color: $whiteColor; // 标题的字体颜色
 
     .header-title {
       font-size: 2rem;
@@ -23,13 +23,13 @@ $fontSize: 0.8rem;
     }
 
     .header-subtitle {
-      font-size: $fontSize;
+      font-size: $fontSize; // 副标题说明字体的大小
     }
   }
 }
 
 .main {
-  width: 30rem;
+  width: 90%;
   margin: 1rem auto; // 水平居中, 上下margin值设为1rem
 
   h2.list-name {
@@ -37,50 +37,64 @@ $fontSize: 0.8rem;
   }
 
   .nav-list {
-    font-size: $fontSize;
-    overflow: hidden;
-    margin: 1rem;
-
-    li {
-      float: left;
-      margin-right: 1rem;
-
-      &:hover {
-        color: $greenColor;
-        cursor: pointer;
+    .nav-items {
+      font-size: $fontSize;
+      overflow: hidden;
+      margin: 1rem; // 导航列表子项的外间距
+  
+      li {
+        float: left;
+        margin-right: 1rem;
+  
+        &:hover {
+          color: $greenColor;
+          cursor: pointer;
+        }
       }
     }
   }
 
   .file-list {
-    margin: 1rem;
-    width: 100%;
+    .file-items {
+      font-size: $fontSize;
+      margin: 1rem; // 文件列表子项的外间距
 
-    thead {
-      tr{
+      .firstline {
         border-bottom: 1px solid;
+        position: relative;
 
-        td {
-          padding-bottom: 0.2rem;
+        // last update固定宽度位于最右部分
+        span:last-child {
+          display: inline-block;
+          width: 6.4rem;
+          position: absolute;
+          right: 0;
         }
       }
-    }
 
-    tbody {
-      font-size: $fontSize;
-
-      tr {
-        td {
-          padding: 0.2rem;
-
-          a {
-            color: inherit;
-            text-decoration: none;
-          }
-        }
+      li {
+        padding: 0.2rem 0;
+        position: relative;
+        overflow: hidden;
 
         &:hover {
           background-color: rgb(221, 234, 221);
+        }
+
+        .filename {
+          width: calc(100% - 6.4rem); // 文件名称宽度根据文件更新时间的宽度计算
+          display: inline-block;
+          color: inherit;
+          text-decoration: none;
+          cursor: pointer;
+        }
+
+        // 文件更新时间固定宽度位于最右
+        .filetime {
+          display: inline-block;
+          width: 6.4rem;
+          position: absolute;
+          right: 0;
         }
       }
     }
