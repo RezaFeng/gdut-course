@@ -27,13 +27,14 @@ export default class Main extends React.Component {
                     {fileTree.map((item, idx)=>{
                         return <li id={idx} key={idx} onClick={this.handleClick}>{item.name}</li>;
                     })}
+                    <li><a href="https://brenner8023.github.io/gdut-nav" target="_blank" rel="noopener noreferrer">工大导航</a></li>
                 </ul>
             </div>
             <div className="file-list">
                 <h2 className="list-name">文件列表</h2>
                 <ul className="file-items">
                     <div className="firstline">
-                        <span>Floders</span>
+                        <span>Folders</span>
                         <span>Last Update</span>
                     </div>
                     {
