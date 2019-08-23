@@ -127,12 +127,12 @@ export default {
     display: flex;
     flex-wrap: wrap;
     color: white;
-    padding-bottom: 1rem;
+    padding-bottom: 0.6rem;
 }
 .link_dt {
     width: 100%;
     text-align: left;
-    padding-bottom: 1rem;
+    padding-bottom: 0.6rem;
 }
 .link_dd {
     font-size: 0.6rem;
